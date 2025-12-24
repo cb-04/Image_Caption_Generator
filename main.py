@@ -1,5 +1,4 @@
-from file_management import load_doc,all_image_captions,save_descriptions
-from preprocessing import cleaning_text,text_vocabulary
+from data import load_doc,all_image_captions,save_descriptions,cleaning_text,text_vocabulary
 
 dataset_text = "Flickr8k_text"
 dataset_images = "Flicker8k_Dataset"

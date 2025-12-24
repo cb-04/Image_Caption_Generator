@@ -1,3 +1,4 @@
+
 def load_doc(filename):
     file = open(filename,'r')
     text = file.read()
