@@ -36,3 +36,19 @@ def cleaning_text(captions):
             img_caption = ' '.join(desc)
             captions[img][i] = img_caption
     return captions
+
+def text_vocabulary(descriptions):
+    vocab = set()
+    for key in descriptions.keys():
+        [vocab.update(d.split()) for d in descriptions[key]]
+    return vocab
+
+def save_descriptions(descriptions, filename):
+    lines = list()
+    for key, desc_list in descriptions.items():
+        for desc in desc_list:
+            lines.append(key + '\t' + desc)
+    data = '\n'.join(lines)
+    file = open(filename,'w')
+    file.write(data)
+    file.close()
