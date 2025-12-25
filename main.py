@@ -2,8 +2,9 @@ from data import load_doc,all_image_captions,save_descriptions,cleaning_text,tex
 from utils import download_with_retry
 from keras.applications.xception import Xception, preprocess_input
 import os
-import tqdm
+from tqdm import tqdm
 from PIL import Image
+from pickle import dump,load
 import numpy as np
 
 dataset_text = "Flickr8k_text"
@@ -40,3 +41,6 @@ def extract_features(directory):
         feature = model.predict(image)
         features[img] = feature
     return features
+
+#features = extract_features(dataset_images)
+#dump(features, open("features.p","wb"))

@@ -33,6 +33,7 @@ dist/
 
 Flicker8k_Dataset/
 Flickr8k_text
+features.p
 *.zip
 *.tar
 *.tar.gz
