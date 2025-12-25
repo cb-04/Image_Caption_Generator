@@ -1,5 +1,5 @@
-from data import load_doc,all_image_captions,save_descriptions,cleaning_text,text_vocabulary,load_photos,load_clean_descriptions,load_features
-from pickle import load
+from data import load_doc,all_image_captions,save_descriptions,cleaning_text,text_vocabulary,load_photos,load_clean_descriptions,load_features,create_tokenizer
+from pickle import load,dump
 import os
 
 dataset_text = "Flickr8k_text"
@@ -22,3 +22,9 @@ filename = dataset_text + "/" + "Flickr_8k.trainImages.txt"
 train_imgs = load_photos(filename)
 train_descriptions = load_clean_descriptions("descriptions.txt",train_imgs)
 train_features = load_features(train_imgs)
+
+#tokenizer = create_tokenizer(train_descriptions)
+#dump(tokenizer,open("artifacts/tokenizer.p","wb"))
+
+
+

@@ -58,3 +58,9 @@ def load_features(photos):
     features = {k:all_features[k] for k in photos}
     #print(features)
     return features
+
+def dict_to_list(descriptions):
+    all_desc = []
+    for key in descriptions.keys():
+        [all_desc.append(d) for d in descriptions[key]]
+    return all_desc
